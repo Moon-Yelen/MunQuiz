@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SeatingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="차량 내 좌석 상태"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="차량이름1 (00가 1234)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/txtWarning"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:background="#F3DE59"
+            android:text="주의"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/txtCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="모든 인원이 탑승하지 않았습니다. 인원을 점검하세요."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtWarning" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/txtCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Seat1"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#5264DE"
+                    android:padding="8dp"
+                    android:text="좌석 1\n\n탑승 감지됨"
+                    android:textColor="#FFFFFF" />
+
+                <Space
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/Seat2"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#F3DE59"
+                    android:padding="8dp"
+                    android:text="좌석 2\n\n자리 비움" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="36dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Seat3"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#EFEFEF"
+                    android:padding="8dp"
+                    android:text="좌석 3\n\n탑승하지 않음" />
+
+                <Space
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/Seat4"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#EFEFEF"
+                    android:padding="8dp"
+                    android:text="좌석 4\n\n탑승하지 않음" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
