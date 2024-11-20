@@ -55,10 +55,15 @@
             app:layout_constraintTop_toBottomOf="@+id/txtWarning" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="48dp"
+            android:layout_marginEnd="24dp"
             android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtCheck">
 
             <LinearLayout
@@ -71,7 +76,7 @@
                     android:id="@+id/Seat1"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:background="#5264DE"
+                    android:background="@color/seat_yes"
                     android:padding="8dp"
                     android:text="좌석 1\n\n탑승 감지됨"
                     android:textColor="@color/white" />
@@ -84,7 +89,7 @@
                     android:id="@+id/Seat2"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:background="#F3DE59"
+                    android:background="@color/seat_chk"
                     android:padding="8dp"
                     android:text="좌석 2\n\n자리 비움" />
 
@@ -125,6 +130,17 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/seat_yes"
+            android:text="차량 시동 걸기"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
