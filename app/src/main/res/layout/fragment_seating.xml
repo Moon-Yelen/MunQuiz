@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:text="차량 내 좌석 상태"
+            android:text="@string/seating_fragment"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -74,7 +74,7 @@
                     android:background="#5264DE"
                     android:padding="8dp"
                     android:text="좌석 1\n\n탑승 감지됨"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/white" />
 
                 <Space
                     android:layout_width="36dp"
@@ -104,9 +104,10 @@
                     android:id="@+id/Seat3"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:background="#EFEFEF"
+                    android:background="@color/seat_null"
                     android:padding="8dp"
-                    android:text="좌석 3\n\n탑승하지 않음" />
+                    android:text="@string/seat_null"
+                    android:textColor="@color/white" />
 
                 <Space
                     android:layout_width="36dp"
@@ -116,9 +117,10 @@
                     android:id="@+id/Seat4"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:background="#EFEFEF"
+                    android:background="@color/seat_null"
                     android:padding="8dp"
-                    android:text="좌석 4\n\n탑승하지 않음" />
+                    android:text="@string/seat_null"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 

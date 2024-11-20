@@ -2,4 +2,13 @@
     <string name="app_name">MunQuiz</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login_fragment">회원 로그인</string>
+    <string name="seating_fragment">차량 내 좌석 상태</string>
+    <string name="warning_fragment">주의</string>
+
+    <string name="seat_yes">탑승 감지됨</string>
+    <string name="seat_chk">자리 비움</string>
+    <string name="seat_no">탑승하지 않음</string>
+    <string name="seat_null">미지원 좌석</string>
 </resources>
