@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private LoginFragment loginFrag;
     private SeatingFragment seatFrag;
+    private WarningFragment warnFrag;
 
-//    https://blog.naver.com/rhrkdfus/221397524547
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static final int LOGIN_FRAGMENT = 0;
     public static final int SEATING_FRAGMENT = 1;
+    public static final int WARNING_FRAGMENT = 2;
 
+    // 화면 전환 함수
     public void changeFragment(int fragmentNum) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
@@ -74,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
                 ft = ft.replace(R.id.frmMain, seatFrag);
                 ft.commitNow();
                 break;
+            case WARNING_FRAGMENT:
+                ft = ft.replace(R.id.frmMain, warnFrag);
+                ft.commitNow();
+                break;
         } // end switch
     } // end changeFragment
+
+
 }

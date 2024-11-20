@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import kiwu.IoT.munquiz.R;
 
@@ -57,10 +60,51 @@ public class LoginFragment extends Fragment {
         }
     }
 
+    private EditText etID;
+    private EditText etPwd;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false);
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
+
+        etID = (EditText)view.findViewById(R.id.etID);
+        etPwd = (EditText)view.findViewById(R.id.etPwd);
+
+        ButtonHandler handler = new ButtonHandler();
+
+        Button btnLogin = (Button)view.findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(handler);
+
+        return view;
+    } // end onCreateView
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        etPwd.setText(null);
+    } // end onStart
+
+    private class ButtonHandler implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+            MainActivity activity = (MainActivity)getActivity();
+
+            String id = "munquiz1234";
+            String pwd = "test1234";
+
+            if (id != etID.getText().toString()) {
+                Toast.makeText(activity, "아이디 혹은 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+                return;
+            } else if (pwd != etPwd.getText().toString()) {
+                Toast.makeText(activity, "아이디 혹은 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            activity.changeFragment(MainActivity.SEATING_FRAGMENT);
+        }
     }
 }
