@@ -1,4 +1,4 @@
 package kiwu.IoT.munquiz.controller;
 
-public class controller {
+public class Controller {
 }
