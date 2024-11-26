@@ -84,7 +84,8 @@ public class SeatingFragment extends Fragment {
     }
 
     // 좌석 상태 표시 변경
-    @SuppressLint({"ResourceAsColor", "SetTextI18n"})
+
+    @SuppressLint("ResourceAsColor")
     private void seatStateChange() {
         if (activity.isSit1 == true) {
             if (activity.isSitting(1) == true) {

@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
             btnCar.setText(getString(R.string.engine_off));
             isEngineOn = true;
+
         }
         else {
             isSit1 = false;
