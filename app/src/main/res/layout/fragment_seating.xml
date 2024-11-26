@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:text="차량이름1 (00가 1234)"
+            android:text="임시차량이름1 (00가 1234)"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -36,10 +36,11 @@
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:background="#F3DE59"
             android:text="주의"
             android:textSize="20sp"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -51,6 +52,7 @@
             android:layout_marginTop="16dp"
             android:text="모든 인원이 탑승하지 않았습니다. 인원을 점검하세요."
             android:textSize="16sp"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtWarning" />
 
@@ -135,12 +137,22 @@
             android:id="@+id/btnCar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
             android:backgroundTint="@color/seat_yes"
-            android:text="차량 시동 걸기"
+            android:text="@string/engine_on"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="좌석표기 변화 테스트"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

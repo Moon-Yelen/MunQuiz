@@ -96,11 +96,11 @@ public class LoginFragment extends Fragment {
             String id = "munquiz1234";
             String pwd = "test1234";
 
-            if (id != etID.getText().toString()) {
-                Toast.makeText(activity, "아이디 혹은 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+            if (!id.equals(etID.getText().toString().trim())) {
+                Toast.makeText(activity, "아이디 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
                 return;
-            } else if (pwd != etPwd.getText().toString()) {
-                Toast.makeText(activity, "아이디 혹은 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+            } else if (!pwd.equals(etPwd.getText().toString().trim())) {
+                Toast.makeText(activity, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
                 return;
             }
 

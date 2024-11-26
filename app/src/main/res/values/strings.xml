@@ -11,4 +11,7 @@
     <string name="seat_chk">자리 비움</string>
     <string name="seat_no">탑승하지 않음</string>
     <string name="seat_null">미지원 좌석</string>
+    
+    <string name="engine_on">차량 시동 걸기</string>
+    <string name="engine_off">차량 시동 끄기</string>
 </resources>
